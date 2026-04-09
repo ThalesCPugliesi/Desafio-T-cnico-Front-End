@@ -49,14 +49,14 @@
 /* BOTÃO DE FECHAR */
 .closeButton {
   position: absolute;
-  top: 20px; /* Distância do topo */
-  right: 20px; /* Distância da direita */
-  background: #f1f5f9; /* Fundo cinza bem clarinho */
-  color: #64748b; /* Cor do 'x' suave */
-  border: none;
+  top: 15px; /* Distância do topo */
+  right: 15px; /* Distância da direita */
+  background: transparent; /* Fundo cinza bem clarinho */
+  color: #ffffff; /* Cor do 'x' suave */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Borda sutil para destacar o botão */
   border-radius: 50%; /* Faz o botão ficar redondo */
-  width: 40px; /* Largura fixa */
-  height: 40px; /* Altura fixa */
+  width: 32px; /* Largura fixa */
+  height: 32px; /* Altura fixa */
   cursor: pointer;
   display: flex; /* Centraliza o 'x' dentro do círculo */
   align-items: center;
@@ -65,9 +65,8 @@
   transition: all 0.2s; /* Animação suave no hover */
 }
 .closeButton:hover {
-  background-color: #e2e8f0; /* Fundo escurece um pouco */
-  color: #1e293b; /* 'x' fica mais escuro */
-  transform: rotate(90deg); /* Pequena rotação charmosa */
+  background-color: rgba(255, 255, 255, 0.3); /* Fundo escurece um pouco */
+  color: #ffffff; /* 'x' fica mais escuro */
 }
 
 @keyframes modalIn {

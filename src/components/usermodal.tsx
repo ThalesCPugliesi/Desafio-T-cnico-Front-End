@@ -15,7 +15,7 @@ export const UserModal = ({ user, onClose }: UserModalProps) => {
     <div className={styles.overlay} onClick={onClose}>
       {/* O stopPropagation impede que o modal feche ao clicar dentro da caixa branca */}
       <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
-        <button className={styles.closeButton} onClick={onClose}>×</button>
+        <button className={styles.closeButton} onClick={onClose}> <X/> </button>
         
         <h2>Detalhes do Usuário</h2>
         
