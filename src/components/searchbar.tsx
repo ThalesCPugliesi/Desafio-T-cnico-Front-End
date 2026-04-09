@@ -1,4 +1,5 @@
 import styles from "./searchbar.module.css";
+import { Search } from "lucide-react";
 
 interface SearchBarProps {
     onChange: (value: string) => void; // precisa de uma função que recebe uma string e retorna void, para lidar com a mudança no input.
@@ -7,6 +8,9 @@ interface SearchBarProps {
 export const SearchBar = ({ onChange }: SearchBarProps) => {
     return (
         <div className={styles.searchWrapper}>
+            
+            <Search className={styles.searchIcon} size={20}/>
+
             <input 
              type = "text"
              className={styles.searchInput}

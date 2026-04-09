@@ -1,32 +1,36 @@
 .searchWrapper {
-  width: 100%;           /* Ocupa a largura total disponível */
-  display: block;        /* Garante que ele se comporte como um bloco */
+  width: 100%;        /* Ocupa a largura total disponível */
+  display: flex;       
   position: relative;
   margin-bottom: 30px;   /* Espaço para os cards abaixo */
 }
 
+.searchIcon {
+  position: absolute;
+  left: 15px; /* Distância da borda esquerda */
+  top: 50%;   /* Empurra o topo do ícone até a metade do input */
+  transform: translateY(-50%); /* Puxa o ícone de volta pela metade da sua própria altura */
+  color: #616a77;
+  z-index: 10;
+  pointer-events: none;
+  display: flex; /* Garante que o SVG interno não tenha comportamentos estranhos */
+  align-items: center;
+}
+
+
 .searchInput {
-  width: 100%;           /* Ocupa 100% da div pai (wrapper) */
-  padding: 18px 20px 18px 50px; /* Mais alto e com espaço para a lupa */
-  font-size: 1.2rem;     /* Texto maior */
-  border: 2px solid #ddd;
+  width: 100%;
+  padding: 16px 20px 16px 48px; /* O 48px garante que o texto não atropele a lupa */
+  font-size: 1.1rem;
+  border: 2px solid #334155; /* Um tom que combina com o fundo escuro */
   border-radius: 12px;
-  box-sizing: border-box; /* IMPRESCINDÍVEL: faz o 100% não estourar a tela */
+  background-color: #1e293b; /* Fundo do input levemente mais claro que o da página */
+  color: white;
   outline: none;
-  transition: border-color 0.2s;
+  transition: all 0.2s ease;
 }
 
 .searchInput:focus {
-  border-color: #3b82f6;
-}
-
-/* Colocando a lupinha dentro do campo */
-.searchWrapper::before {
-  content: "🔍";
-  position: absolute;
-  left: 18px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.3rem;
-  z-index: 2;
+  border-color: #d1d5db;
+  background-color: #0f172a; /* Escurece um pouco ao focar */
 }

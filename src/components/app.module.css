@@ -7,12 +7,12 @@
   background-color: #f9fafb; /* Fundo levemente cinza para destacar os cards */
   min-height: 100vh; /* Garante que o fundo cubra a tela toda */
   background-color: #111827;
-  text-color: #E5E7EB;
+  color: #E5E7EB;
 }
 
 .title {
   text-align: center;
-  color: #111827;
+  color: #E5E7EB;
   font-size: 2.5rem;
   margin-bottom: 10px;
   font-weight: 800;

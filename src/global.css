@@ -1,3 +1,9 @@
+* {
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased; /* Deixa as letras mais nítidas no Chrome/Mac */
+  -moz-osx-font-smoothing: grayscale;
+}
+
 body {
     margin: 0;
     padding: 0;
