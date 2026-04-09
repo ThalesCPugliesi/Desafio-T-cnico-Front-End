@@ -3,7 +3,7 @@ export interface User {
     name: string;
     email: string;
     password: string;
-    phone: string;
+    phone: string;     // O phone vem como string da API.
     company: {
         name: string;
     }
@@ -11,3 +11,5 @@ export interface User {
         city: string;
     };
 }
+
+// facilitando a importação do tipo User.
