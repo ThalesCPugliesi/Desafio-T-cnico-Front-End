@@ -2,6 +2,7 @@ import {use, useEffect, useState } from "react";
 import type { User } from "./types/user";
 import { SearchBar } from "./components/searchbar";
 import { UserCard } from "./components/usercard";
+import { UserModal } from "./components/usermodal";
 
 function App() {
   const [users, setUsers] = useState<User[]>([]); // Guarda a lista de usuários. Começa vazia
@@ -50,6 +51,14 @@ function App() {
         />
         ))}
       </div>
+
+      {selectedUser && (
+        <UserModal 
+          user={selectedUser} 
+          onClose={() => setSelectedUser(null)} 
+        />
+      )}
+
     </div>
   )
   
