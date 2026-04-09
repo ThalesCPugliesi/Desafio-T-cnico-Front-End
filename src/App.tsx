@@ -1,12 +1,14 @@
 import {use, useEffect, useState } from "react";
 import type { User } from "./types/user";
 import { SearchBar } from "./components/searchbar";
+import { UserCard } from "./components/usercard";
 
 function App() {
   const [users, setUsers] = useState<User[]>([]); // Guarda a lista de usuários. Começa vazia
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false); // Guarda se houve um erro na busca dos usuários. Começa como false
   const [search, setSearch] = useState("");
+  const [selectedUser, setSelectedUser] = useState<User | null>(null);
 
   useEffect(() => {
     const fetchUsers = async () => { //Função assíncrona para buscar os usuários da API
@@ -39,13 +41,13 @@ function App() {
       <SearchBar onChange={setSearch} /> 
 
 
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))", gap: "15px"}}>
-        {filteredUsers.map(user => ( // Renderiza um card para cada usuário filtrado.
-          <div key={user.id} style={{ border: "1px solid #ccc", padding: "15px", borderRadius: "8px"}}>
-            <h3>{user.name}</h3>
-            <p>{user.email}</p>
-            <button> Ver detalhes </button>
-          </div>
+       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))", gap: "15px"}}>
+        {filteredUsers.map(user => (
+        <UserCard 
+        key={user.id} 
+        user={user} 
+       onClick={() => setSelectedUser(user)} 
+        />
         ))}
       </div>
     </div>
