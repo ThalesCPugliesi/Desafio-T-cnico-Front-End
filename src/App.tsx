@@ -28,7 +28,7 @@ function App() {
     fetchUsers();
   }, []);
 
-  const filteredUsers = users.filter(u => u.name.toLowerCase().includes(search.toLowerCase())); // Filtra os usuários com base no nome, usando o valor do search. A busca é case-insensitive.
+  const filteredUsers = users.filter(u => u.name.toLowerCase().includes(search.toLowerCase()) || u.email.toLowerCase().includes(search.toLowerCase())); // Filtra os usuários com base no nome e email, usando o valor do search. A busca é case-insensitive.
 
   // Retornos condicionais para lidar com os estados de loading e error.
   if (loading) return <h1>Carregando...</h1>;
