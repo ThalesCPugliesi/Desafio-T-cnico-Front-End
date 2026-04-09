@@ -1,26 +1,51 @@
 /* src/components/UserCard.module.css */
 .card {
-  border: 1px solid #ccc;
-  padding: 15px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: transform 0.2s, background-color 0.2s;
-  margin-bottom: 10px;
+  background-color: #1F2937;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease; /* Animação suave para todas as propriedades */
+  position: relative;
+  overflow: hidden;
 }
 
+/* Efeito de Elevação e Sombra no Hover */
 .card:hover {
-  background-color: #f9f9f9;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transform: translateY(-5px); /* Sobe um pouquinho */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Sombra mais difusa */
+  border-color: #d1d5db;
 }
 
 .name {
-  margin: 0;
-  color: #333;
-  font-size: 1.2rem;
+  margin: 0 0 8px 0;
+  font-size: 1.25rem;
+  color: #E5E7EB;
+  font-weight: 700;
 }
 
 .email {
-  color: #666;
-  font-size: 0.9rem;
+  color: #9CA3AF;
+  font-size: 0.95rem;
+  margin: 0 0 20px 0;
+  word-break: break-all; /* Evita que e-mails longos quebrem o layout */
+}
+
+.button {
+  margin-top: auto; /* Empurra o botão para o fundo do card */
+  cursor: pointer;
+  padding: 12px 20px;
+  background-color: #3B82F6; 
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #2563EB; /* Azul mais escuro no hover */
 }

@@ -1,0 +1,44 @@
+/* src/App.module.css */
+.container {
+  max-width: 1200px; /* Largura máxima confortável para leitura */
+  margin: 0 auto; /* Centraliza na tela */
+  padding: 20px 20px; /* Espaçamento interno nas laterais e topo */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte moderna */
+  background-color: #f9fafb; /* Fundo levemente cinza para destacar os cards */
+  min-height: 100vh; /* Garante que o fundo cubra a tela toda */
+  background-color: #111827;
+  text-color: #E5E7EB;
+}
+
+.title {
+  text-align: center;
+  color: #111827;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+.subtitle {
+  text-align: center;
+  color: #6b7280;
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+}
+
+/* A Mágica da Responsividade: Grid Autogerenciado */
+.grid {
+  display: grid;
+  /* Cria colunas de no mínimo 300px, distribuindo o espaço restante (1fr) */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px; /* Espaço entre os cards */
+}
+
+.noResults {
+  text-align: center;
+  grid-column: 1 / -1; /* Ocupa todas as colunas do grid */
+  padding: 60px;
+  color: #6b7280;
+  background-color: white;
+  border-radius: 12px;
+  border: 1px dashed #e5e7eb;
+}

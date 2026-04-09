@@ -3,6 +3,7 @@ import type { User } from "./types/user";
 import { SearchBar } from "./components/searchbar";
 import { UserCard } from "./components/usercard";
 import { UserModal } from "./components/usermodal";
+import styles from "./components/app.module.css";
 
 function App() {
   const [users, setUsers] = useState<User[]>([]); // Guarda a lista de usuários. Começa vazia
@@ -37,12 +38,12 @@ function App() {
 
   //Ln 39 passa a função setSearch para o componente SearchBar, que é chamada toda vez que o usuário digita algo no input. O valor do input é passado para setSearch, atualizando o estado search e, consequentemente, filtrando a lista de usuários exibida.
   return (
-    <div style={{ maxWidth: '800px', margin: "0 auto", padding: "20px"}}>
+    <div className={styles.container}>
       <h1>Lista de Usuários</h1>
-      <SearchBar onChange={setSearch} /> 
 
+        <SearchBar onChange={setSearch} /> 
 
-       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))", gap: "15px"}}>
+       <div className={styles.grid}>
         {filteredUsers.map(user => (
         <UserCard 
         key={user.id} 
