@@ -5,7 +5,7 @@ Projeto desenvolvido em React + TypeScript + Vite.
 ## Como rodar o projeto
 
 1. Clone o repositório:
-   git clone (https://github.com/ThalesCPugliesi/Desafio-T-cnico-Front-End)
+   git clone https://github.com/ThalesCPugliesi/Desafio-T-cnico-Front-End
 
 2. Entre na pasta:
    cd desafio-frontend
